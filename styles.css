@@ -457,3 +457,9 @@ nav a:hover::before {
 .comingsoon h2 span {
     font-weight: 300;
 }
+
+@media screen and (max-width: 770px) {
+    .footer {
+        position: relative;
+    }
+}
