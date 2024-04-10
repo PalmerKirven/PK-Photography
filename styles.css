@@ -11,7 +11,7 @@
 #about_me {
     margin: 0;
     padding: 0;
-    background-image: url(images/aboutmebg.jpg);
+    background-image: url(images/aboutme_assets/aboutmebg.jpg);
     /*Sets the background image of the about_me page*/
     background-repeat: no-repeat;
     /*Make the image not repeat if not filling entire screen*/
@@ -143,6 +143,7 @@ nav ul {
     /*CENTERS NAV BAR*/
     list-style: none;
     height: 100%;
+    padding: 0px;
     width: 70%;
     background: rgba(143, 223, 245, 0.689);
     border-radius: 25px;
@@ -292,6 +293,8 @@ nav a:hover::before {
 
 /*THIS IS THE MAIN CONTAINER THE GALLERY AND HEADER SITS IN*/
 .galleryContainer {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     /*This makes the container a flex layout, meaning resizing will behave predictably*/
     flex-direction: column;
@@ -300,17 +303,19 @@ nav a:hover::before {
     /*Content will be in the center of the container*/
     align-items: center;
     text-align: center;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 0px 0px;
 }
 
 /*THIS IS THE POSITION OF THE HEADER IN THE GALLERY*/
-.galleryContainer .galleryHeading {
-    width: 50%;
+.galleryHeading {
+    width: 100%;
     padding-bottom: 0px;
+    text-align: center;
+
 }
 
 /*THIS IS THE HEADER TEXT OF THE GALLERY*/
-.galleryContainer .galleryHeading h3 {
+.galleryHeading h3 {
     font-size: 3em;
     font-weight: bolder;
     list-style: none;
@@ -320,32 +325,22 @@ nav a:hover::before {
 }
 
 /*TEXT TWO COLORS USING SPAN TAGS*/
-.galleryContainer .galleryHeading h3 span {
+.galleryHeading h3 span {
     font-weight: 100;
 }
 
 /*CONTAINER WHICH HOLDS THE PICTURE COLUMNS*/
 .galleryContainer .galleryBox {
-    display: flex;
-    /*This makes the container a flex layout, meaning resizing will behave predictably*/
-    flex-direction: row;
-    justify-content: space-between;
-    /*Makes space between images if possible*/
-}
-
-/*COLUMNS OF PICTURES*/
-.galleryContainer .galleryBox .gallery {
-    display: flex;
-    /*This makes the container a flex layout, meaning resizing will behave predictably*/
-    flex-direction: column;
-    width: 32.5%;
-}
-
-/*ALL IMAGES WITHING THE COLUMNS*/
-.galleryContainer .galleryBox .gallery img {
     width: 100%;
-    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px
+}
+
+.galleryContainer .galleryBox img {
+    width: 100%;
     border-radius: 8px;
+    max-width: 100%;
 }
 
 
@@ -353,25 +348,27 @@ nav a:hover::before {
 
 /*THIS IS THE MAIN CONTAINER THE GALLERY AND HEADER SITS IN*/
 .hp_galleryContainer {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     /*This makes the container a flex layout, meaning resizing will behave predictably*/
     flex-direction: column;
     /*This puts the content in columns which puts header above the pictures*/
-    justify-content: center;
-    /*Content will be in the center of the container*/
     align-items: center;
     text-align: center;
-    margin: 0px 20px 0px 20px;
+    margin: 20px 0px 60px;
+    /*padding: 50px 8%;*/
 }
 
 /*THIS IS THE POSITION OF THE HEADER IN THE GALLERY*/
-.hp_galleryContainer .hp_galleryHeading {
-    width: 50%;
-    padding-bottom: 0px;
+.hp_galleryHeading {
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 /*THIS IS THE HEADER TEXT OF THE GALLERY*/
-.hp_galleryContainer .hp_galleryHeading h2 {
+.hp_galleryHeading h2 {
     font-size: 2em;
     font-weight: bolder;
     list-style: none;
@@ -382,29 +379,23 @@ nav a:hover::before {
 }
 
 /*TEXT TWO COLORS USING SPAN TAGS*/
-.hp_galleryContainer .hp_galleryHeading h2 span {
+.hp_galleryHeading h2 span {
     /*Reduce font weight to make text pop*/
     font-weight: 100;
+
 }
 
 /*CONTAINER WHICH HOLDS THE PICTURE COLUMNS*/
 .hp_galleryContainer .hp_galleryBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-/*COLUMNS OF PICTURES*/
-.hp_galleryContainer .hp_galleryBox .hp_gallery {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 10fr));
+    grid-gap: 10px
 }
 
 /*ALL IMAGES WITHING THE COLUMNS*/
-.hp_galleryContainer .hp_galleryBox .hp_gallery img {
+.hp_galleryContainer .hp_galleryBox img {
     width: 100%;
-    height: 550px;
+    border-radius: 8px;
 }
 
 
