@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     background-image: url(images/aboutme_assets/aboutmebg.jpg);
+    background-position: center;
     /*Sets the background image of the about_me page*/
     background-repeat: no-repeat;
     /*Make the image not repeat if not filling entire screen*/
@@ -34,7 +35,8 @@
 #contact {
     margin: 0;
     padding: 0;
-    background-image: url(images/aboutmebg.jpg);
+    background-image: url(images/contact_assets/contact_bg.jpg);
+    background-position: center;
     /*Sets the background image of the contact page *ONLY ABOUT ME IMAGE USED**/
     background-repeat: no-repeat;
     /*Make the image not repeat if not filling entire screen*/
@@ -44,6 +46,15 @@
     /*Covers the entire screen with the image*/
     font-family: "Poppins", Helvetica, sans-serif;
     font-weight: 300;
+}
+
+.contactform {
+    text-align: center;
+    background-color: rgba(161, 225, 177, 0.533);
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 10px 10px;
 }
 
 #prints {
@@ -75,6 +86,7 @@
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
+
 
 
 
@@ -462,4 +474,23 @@ nav a:hover::before {
     .footer {
         position: relative;
     }
+
+    .galleryContainer .galleryBox {
+        display: inline-block;
+    }
+
+    .galleryContainer .galleryBox img {
+        width: 40%;
+        border-radius: 8px;
+    }
+
+    .hp_galleryContainer .hp_galleryBox {
+        display: inline-block;
+    }
+
+    .hp_galleryContainer .hp_galleryBox img {
+        width: 40%;
+        border-radius: 8px;
+    }
+
 }
