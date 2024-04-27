@@ -55,6 +55,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 5px 10px 10px;
+    border-radius: 20px;
 }
 
 #prints {
@@ -435,6 +436,43 @@ nav a:hover::before {
     /*Push to left side of footer*/
     padding-right: 10 px;
     padding-top: 5px;
+}
+
+.footer  .social-sharing{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*Push to right side of footer*/
+    padding-right: 20 px;
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+#share-facebook{
+        background-color: #174be7;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 16px;
+        opacity: 80%;
+}
+
+#share-twitter{
+    background-color: #000000; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 16px;
+    opacity: 80%;
 }
 
 
